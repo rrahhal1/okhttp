@@ -174,7 +174,7 @@ public final class Util {
   /** Returns a 32 character string containing an MD5 hash of {@code s}. */
   public static String md5Hex(String s) {
     try {
-      MessageDigest messageDigest = MessageDigest.getInstance("MD5");
+      MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
       byte[] md5bytes = messageDigest.digest(s.getBytes("UTF-8"));
       return ByteString.of(md5bytes).hex();
     } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
